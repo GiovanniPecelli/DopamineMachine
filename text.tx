@@ -1,0 +1,13 @@
+dopamine machine
+    node_modules
+    public
+        audio
+        favicon.io
+        index.html
+    src
+        assets
+        components
+        index.js
+        style.scss
+    package.json
+    package-lock.json

@@ -1,0 +1,171 @@
+* {
+  font-family: 'Nunito', sans-serif;
+  background-color: black;
+  margin: 0; // Rimuovi il margine predefinito
+  padding: 0; // Rimuovi il padding predefinito
+  box-sizing: border-box; // Include padding e bordo nelle dimensioni degli elementi
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+
+#dopamine-machine {
+  text-align: center;
+  margin-top: 50px;
+  background-image: url('/assets/dopamine.jpg');
+  background-size: cover; // Per coprire l'intera area
+  background-position: center; // Centra l'immagine
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; // Necessario per il pseudo-elemento
+  filter: saturate(0); // Rimuove la saturazione dell'immagine
+  
+  // Sovrapposizione scura
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); // Oscura l'immagine con un'ombra nera
+    z-index: 1; // Sovrappone tutto
+  }
+
+  // Garantisce che il contenuto rimanga visibile
+  .container {
+    position: relative;
+    z-index: 2; // Porta il contenuto sopra la sovrapposizione
+    padding: 20px; // Padding interno
+  }
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  background-color: black; // Colore di sfondo dell'intestazione
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); // Ombra per l'intestazione
+}
+
+.header-content {
+  gap: 20px;
+  padding: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px; // Imposta la larghezza desiderata per il logo
+  height: auto; // Mantiene le proporzioni
+}
+
+.menu ul {
+  list-style: none; // Rimuove i punti dalla lista
+  display: flex; // Allinea i pulsanti in linea
+  padding: 0; // Rimuove il padding della lista
+}
+
+.menu li {
+  margin-left: 0px; // Spazio tra i pulsanti
+}
+
+.header-button {
+  background-color: none; // Colore di sfondo del pulsante
+  color: white; // Colore del testo del pulsante
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s; // Effetto di transizione
+}
+
+.display {
+  background: none;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 80px;
+  text-transform: uppercase;
+  color: whitesmoke; // Modificato per visibilità
+  z-index: 2; // Mantieni il display sopra l'overlay
+}
+
+.drum-pads {
+  text-transform: uppercase;
+  background: none;
+  color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 2; // Mantieni i pulsanti sopra l'overlay
+}
+
+.drum-pad {
+  border-radius: 10px;
+  background: none;
+  border: 1px solid whitesmoke;
+  width: calc(50% - 20px); /* ogni pulsante occupa il 50% */
+  height: 200px;
+  margin: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  z-index: 2; // Mantieni i pulsanti sopra l'overlay
+
+  &:hover {
+    background-color: whitesmoke;
+    color: black;
+  }
+}
+
+.functionality-section {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 40px;
+  background-color: black; // Cambia il colore per differenziarlo
+  margin-top: 30px; // Spazio sopra la sezione per distanziarla dalla drum machine
+}
+
+.functionality-section h2 {
+  font-size: 24px;
+  color: #545454;
+}
+
+.functionality-section p {
+  padding: 0px 25px;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-size: 16px;
+  color: whitesmoke;
+}
+
+.footer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; // Ensure it's above other content
+}
+
+.scroll-to-top {
+  background-color: whitesmoke; // Customize background color
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 24px; // Font size for arrow
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: black; // Color on hover
+    color: whitesmoke;
+  }
+}
