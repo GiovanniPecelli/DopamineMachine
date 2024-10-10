@@ -93,7 +93,6 @@ const DopamineMachine = () => {
                 window.location.href = 'https://slipsintoslot.netlify.app/';
               }
             }}>
-              <img src="/assets/logo.png" alt="logo" />
             </a>
           </div>
 

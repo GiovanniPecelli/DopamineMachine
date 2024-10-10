@@ -13,7 +13,7 @@ body {
 
 #dopamine-machine {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
   background-image: url('/assets/dopamine.jpg');
   background-size: cover; // Per coprire l'intera area
   background-position: center; // Centra l'immagine
@@ -54,16 +54,21 @@ body {
 }
 
 .header-content {
-  gap: 20px;
-  padding: 30px 0px;
+  gap: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo img {
-  width: 50px; // Imposta la larghezza desiderata per il logo
-  height: auto; // Mantiene le proporzioni
+.logo {
+  width: 120px;
+  height: 100px;
+  margin-left: 14px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  background-image: url('/assets/logo.png'); /* Percorso pubblico */
+  background-size: contain; /* Adatta l'immagine al contenitore */
+  background-repeat: no-repeat; /* Non ripetere l'immagine */
 }
 
 .menu ul {
