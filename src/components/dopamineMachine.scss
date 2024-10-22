@@ -54,14 +54,14 @@ body {
 }
 
 .header-content {
-  gap: 5px;
+  gap: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  width: 120px;
+  min-width: 120px;
   height: 100px;
   margin-left: 14px;
   margin-top: 14px;
@@ -75,6 +75,7 @@ body {
   list-style: none; // Rimuove i punti dalla lista
   display: flex; // Allinea i pulsanti in linea
   padding: 0; // Rimuove il padding della lista
+  margin-right: 10px;
 }
 
 .menu li {

@@ -121,7 +121,7 @@ const DopamineMachine = () => {
                     }
                   }}
                 >
-                  SlipsIntoSlot
+                   By SlipsIntoSlot
                 </button>
               </li>
             </ul>
